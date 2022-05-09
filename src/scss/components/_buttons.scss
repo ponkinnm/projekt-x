@@ -1,0 +1,18 @@
+$padding: 1rem 1.5rem;
+
+@mixin standard($bg: var(--color-accent), $color: var(--color-light), $br: 10px, $hover: var(--color-dark)) {
+  background-color: $bg;
+  color: $color;
+  text-decoration: none;
+  padding: $padding;
+  display: inline-block;
+  border-radius: $br;
+  font-size: var(--font-size-1);
+  font-family: var(--font-sans);
+  border: 0;
+  cursor: pointer;
+  &:hover {
+    background-color: $hover;
+  }
+
+}
