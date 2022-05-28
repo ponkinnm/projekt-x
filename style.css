@@ -1,6 +1,6 @@
 :root {
   --font-serif: serif;
-  --font-sans: sans-serif;
+  --font-sans: "Open Sans";
   --font-base: 1rem;
   --font-scale: 1.25;
   --font-size-1: var(--font-base);
@@ -9,8 +9,8 @@
   --font-size-4: calc(var(--font-size-3) * var(--font-scale));
   --font-size-5: calc(var(--font-size-4) * var(--font-scale));
   --font-size-6: calc(var(--font-size-5) * var(--font-scale));
-  --color-accent: #3694f2;
-  --color-light: #fff;
+  --color-accent: #3e142a;
+  --color-light: #efefef;
   --color-medium: #666;
   --color-dark: #333;
   --section-gap: 8rem;
@@ -35,10 +35,23 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/src/assets/images/sage.jpg");
+  background-clip: padding-box;
+  object-fit: cover;
 }
 
 img {
   max-width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: var(--grid-container);
+  /*   background-color: #000;  /* TEMP */
+}
+
+* {
+  font-family: var(--font-sans);
 }
 
 h1,
@@ -79,6 +92,49 @@ a,
 li {
   line-height: 1.5;
   font-family: var(--font-serif);
+}
+
+.header {
+  display: grid;
+  height: var(--menu-height);
+  grid-column: inner;
+  grid-template-columns: var(--grid-content);
+}
+
+.branding {
+  color: var(--color-light);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  grid-column: 1/4;
+}
+.branding__text {
+  font-size: 0.75rem;
+  padding-left: 0.5rem;
+}
+
+.menu {
+  font-size: var(--font-size-2);
+  font-weight: 500;
+  color: var(--color-light);
+  display: flex;
+  align-items: center;
+  grid-column: 4/13;
+}
+.menu__list {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.menu__item {
+  list-style: none;
+}
+.menu__link {
+  font-family: var(--font-sans);
+  text-decoration: none;
+}
+.menu__link:visited {
+  color: var(--color-light);
 }
 
 /*# sourceMappingURL=style.css.map */

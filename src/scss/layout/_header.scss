@@ -1,0 +1,49 @@
+.header {
+  display: grid;
+  height: var(--menu-height);
+  grid-column: inner;
+  grid-template-columns: var(--grid-content);
+}
+
+.branding {
+  color: var(--color-light);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  grid-column: 1/4;
+  &__text {
+    font-size: 0.75rem;
+    padding-left: .5rem;
+  }
+}
+
+.menu {
+  font-size: var(--font-size-2);
+  font-weight: 500;
+  color: var(--color-light);
+  display: flex;
+  align-items: center;
+  grid-column: 4/13;
+
+  &__list {
+    display: flex;
+    width: 100%;
+
+  justify-content: space-around;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+  font-family: var(--font-sans);
+
+
+    text-decoration: none;
+
+    &:visited{
+      color: var(--color-light);
+    }
+  }
+}

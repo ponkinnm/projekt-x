@@ -2,8 +2,8 @@
 
   //Fonts
   --font-serif: serif;
-  --font-sans: sans-serif;
-  
+  --font-sans: 'Open Sans';
+
   //Font scale for headings and text
   --font-base: 1rem;
   --font-scale: 1.25;
@@ -15,8 +15,8 @@
   --font-size-6: calc(var(--font-size-5) * var(--font-scale));
 
   // Colors
-  --color-accent: #3694f2;
-  --color-light: #fff;
+  --color-accent: #3e142a;
+  --color-light: #efefef;
   --color-medium: #666;
   --color-dark: #333;
 
