@@ -17,8 +17,14 @@ img {
   max-width: 100%;
 }
 
+a{
+  text-decoration: none;
+  &:visited{
+    color: inherit;
+  }
+}
+
 .container {
   display: grid;
   grid-template-columns: var(--grid-container);
-  /*   background-color: #000;  /* TEMP */
 }
