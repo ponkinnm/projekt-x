@@ -1,5 +1,4 @@
 :root {
-
   //Fonts
   --font-serif: serif;
   --font-sans: 'Open Sans';
@@ -17,11 +16,12 @@
 
   // Colors
   --color-accent: #3e142a;
+  --color-accent-lighter: rgba(62, 20, 41, 0.9);
   --color-light: #efefef;
   --color-medium: #666;
   --color-dark: #333;
-  --color-primary:#677167;
-  --color-secondary:#aaab9b;
+  --color-primary: #677167;
+  --color-secondary: #aaab9b;
 
   // Margins, section gaps
   --section-gap: 8rem;

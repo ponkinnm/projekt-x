@@ -7,19 +7,16 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('/src/assets/images/sage.jpg');
-    background-clip: padding-box;
-    object-fit: cover;
+  background-color: var(--color-primary);
 }
 
 img {
   max-width: 100%;
 }
 
-a{
+a {
   text-decoration: none;
-  &:visited{
+  &:visited {
     color: inherit;
   }
 }
@@ -27,4 +24,15 @@ a{
 .container {
   display: grid;
   grid-template-columns: var(--grid-container);
+
+  &--landing {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url('/src/assets/images/sage.jpg');
+  }
+
+  &--consultations{
+
+  }
 }
+
+
