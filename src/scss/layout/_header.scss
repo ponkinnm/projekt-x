@@ -13,7 +13,7 @@
   grid-column: 1/4;
   &__text {
     font-size: 0.75rem;
-    padding-left: .5rem;
+    padding-left: 0.5rem;
   }
 }
 
@@ -28,8 +28,7 @@
   &__list {
     display: flex;
     width: 100%;
-
-  justify-content: space-around;
+    justify-content: space-around;
   }
 
   &__item {
@@ -37,13 +36,27 @@
   }
 
   &__link {
-  font-family: var(--font-sans);
-
-
+    font-family: var(--font-sans);
+    transition: color ease-in 0.2s;
     text-decoration: none;
 
-    &:visited{
+    &:visited {
       color: var(--color-light);
     }
+
+    &:hover {
+      color: var(--color-secondary);
+    }
   }
+}
+
+.logo__link {
+  padding: 1rem 0;
+}
+
+.menu-drawer {
+  visibility: hidden;
+}
+.menu-drawer__icon {
+  display: none;
 }

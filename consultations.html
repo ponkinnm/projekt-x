@@ -12,12 +12,13 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Consultations</title>
-    <script defer src="/consultations.js"></script>
+    <script defer src="/sidebar.js"></script>
+    <script defer src="/form.js"></script>
   </head>
   <body>
     <div class="container container--consultations">
       <header class="header">
-        <a href="index.html">
+        <a class="logo__link" href="index.html">
           <div class="branding">
             <img
               class="branding__logo"
@@ -33,9 +34,11 @@
 
         <nav class="menu">
           <ul class="menu__list">
-            <li class="menu__item"><a class="menu__link" href="">Home</a></li>
             <li class="menu__item">
-              <a class="menu__link" href="">Consultations</a>
+              <a class="menu__link" href="index.html">Home</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="consultations.html">Consultations</a>
             </li>
             <li class="menu__item"><a class="menu__link" href="">About</a></li>
             <li class="menu__item">
@@ -43,6 +46,20 @@
             </li>
           </ul>
         </nav>
+
+        <div class="menu-drawer">
+          <div class="menu-drawer__content">
+            <a href="index.html" class="menu-drawer__link">Home</a
+            ><a href="consultations.html" class="menu-drawer__link"
+              >Consultations</a
+            ><a href="" class="menu-drawer__link">About</a
+            ><a href="" class="menu-drawer__link">Contact</a>
+            <div class="menu-drawer__closeBtn">X</div>
+          </div>
+        </div>
+
+        <img src="src/assets/icons/hamburger.svg" class="menu-drawer__icon" />
+        <script src="/consultations.js"></script>
       </header>
 
       <div class="content">
@@ -60,6 +77,9 @@
             everyone has the right to heal, and offer consults on a sliding
             scale. Let me know what works for you and we take it from there.
           </p>
+          <div class="img-wrapper">
+            <img src="/src/assets/images/tea.jpg" alt="Tea" />
+          </div>
         </div>
 
         <div class="content__right">
@@ -96,12 +116,16 @@
               name=""
               id=""
               placeholder="I want to feel better when..."
-            ></textarea
-            >
+            ></textarea>
             <br />
             <button class="connect__btn" type="submit">SUBMIT</button>
           </form>
+
         </div>
+        <p class="disclaimer">
+            All written information is confidential between the client and me, and I will delete all data if you are no longer a client.
+The herbalist’s primary role is as an educator and partner, encouraging and supporting your goals for improved health and well-being. Herbalists neither diagnose nor directly treat disease. I am not a medical doctor and do not claim to diagnose, treat or cure any medical conditions or pathologies nor prescribe medicine nor in any way represent myself as so doing. For any medical condition, you are advised to seek care from an appropriate medical practitioner. Whether you chose to engage a medical practitioner or not for your care is your right and I assume no responsibility for your decision in this matter.
+          </p>
       </div>
     </div>
   </body>

@@ -7,35 +7,36 @@
   grid-template-columns: var(--grid-content);
   grid-template-rows: var(--grid-content);
   height: calc(100vh - var(--menu-height));
-  /*   border: 2px solid gray;
- */
+
   &__left {
-    /*     border: 2px solid red;
- */
     grid-column: 1/6;
-    grid-row: 3/9;
+    grid-row: 2/13;
+
+    .img-wrapper {
+      margin-top: 4rem;
+      overflow: hidden;
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+    }
   }
 
   &__right {
     display: grid;
     grid-template-rows: var(--grid-content);
     grid-column: 8/11;
-    grid-row: 3/13;
-
+    grid-row: 2/13;
   }
 }
 
-.active{
-  text-decoration: underline;
-}
-
 .connect {
-  grid-row: 2/9 ;
+  grid-row: 2/9;
   ::placeholder {
     color: var(--color-primary);
   }
 
-  input, textarea {
+  input,
+  textarea {
     margin: 0.5rem 0.25rem 1rem 0;
     border: 0;
     padding: 0.5rem 1rem;
@@ -63,5 +64,97 @@
 
   &__btn {
     @include standard;
+  }
+}
+.disclaimer {
+  font-size: 11px;
+  grid-row: 9/13;
+  grid-column: 8/13;
+  color: var(--color-secondary);
+}
+
+@media screen and (max-width: 500px) {
+  .content {
+    color: var(--color-light);
+    grid-column: inner;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+
+
+    p{
+      font-size: calc(var(--font-size-1) / var(--font-scale));
+      text-align: left;
+
+    }
+
+    .img-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      border-radius: 0;
+      height: 200px;
+      width: 100%;
+
+      img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .connect {
+      grid-row: 2/9;
+      ::placeholder {
+        color: var(--color-primary);
+      }
+
+      input,
+      textarea {
+        margin: 0.5rem 0.25rem 1rem 0;
+        border: 0;
+        padding: 0.5rem 1rem;
+        background-color: var(--color-secondary);
+
+        border-radius: 30px;
+      }
+
+      &__firstname {
+        width: 48%;
+      }
+
+      &__lastname {
+        width: 48%;
+      }
+
+      &__mail {
+        width: 100%;
+      }
+
+      &__question {
+        width: 100%;
+        height: 8rem;
+      }
+
+      &__btn {
+        @include standard;
+      }
+    }
+    .disclaimer {
+      font-size: 11px;
+      grid-row: 9/13;
+      grid-column: 8/13;
+      color: var(--color-secondary);
+      padding-bottom: 3rem;
+    }
   }
 }

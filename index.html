@@ -16,8 +16,11 @@
 
   <body>
     <div class="container container--landing">
+      <div class="bg-img-wrapper">
+        <img class="bg-img" src="/src/assets/images/sage.jpg" alt="" />
+      </div>
       <header class="header">
-        <a href="index.html">
+        <a class="logo__link" href="index.html">
           <div class="branding">
             <img
               class="branding__logo"
@@ -33,9 +36,11 @@
 
         <nav class="menu">
           <ul class="menu__list">
-            <li class="menu__item"><a class="menu__link" href="">Home</a></li>
             <li class="menu__item">
-              <a class="menu__link" href="">Consultations</a>
+              <a class="menu__link" href="index.html">Home</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="consultations.html">Consultations</a>
             </li>
             <li class="menu__item"><a class="menu__link" href="">About</a></li>
             <li class="menu__item">
@@ -43,6 +48,20 @@
             </li>
           </ul>
         </nav>
+
+        <div class="menu-drawer">
+          <div class="menu-drawer__content">
+            <a href="index.html" class="menu-drawer__link">Home</a
+            ><a href="consultations.html" class="menu-drawer__link"
+              >Consultations</a
+            ><a href="" class="menu-drawer__link">About</a
+            ><a href="" class="menu-drawer__link">Contact</a>
+            <div class="menu-drawer__closeBtn">X</div>
+          </div>
+        </div>
+
+        <img src="src/assets/icons/hamburger.svg" class="menu-drawer__icon" />
+        <script defer src="/sidebar.js"></script>
       </header>
 
       <div class="hero">
